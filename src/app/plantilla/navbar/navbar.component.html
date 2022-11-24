@@ -1,0 +1,19 @@
+<nav>
+    <div class="nav-wrapper  #757575 grey darken-1" >
+      <a routerLink="/" class="brand-logo right">Propiedades Horizontales</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li *ngIf="seInicioSesion===false"><a routerLink="/seguridad/login">
+          Login</a>
+        </li>
+        <li *ngIf="seInicioSesion===false"><a (click)="cerrarSesion()">
+          Logout</a>
+        </li>
+        <li *ngIf="seInicioSesion===false"><a routerLink="/registro/buscar-persona">
+          Registro De Personas</a>
+        </li>
+        <li *ngIf="seInicioSesion===false"><a routerLink="/propiedad/buscar-apartamento">
+          Propiedades</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

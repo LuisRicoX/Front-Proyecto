@@ -1,0 +1,34 @@
+<h1>Registrar Persona</h1>
+<div class="row">
+    <form class="col s12" [formGroup]="formPersona" (ngSubmit)="guardarPersona">
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="nombreCompleto" placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <label for="first_name">Nombre Completo</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="documento" id="documento" type="number" class="validate">
+          <label for="documento">Documento</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="correo" id="email" type="email" class="validate">
+          <label for="email">correo</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="celular" placeholder="Placeholder" id="celular" type="number" class="validate">
+          <label for="celular">Celular</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="clave" id="password" type="password" class="validate">
+          <label for="password">Clave</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>

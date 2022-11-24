@@ -1,0 +1,23 @@
+<h1>Listado De Apartamentos</h1>
+<div class="row mt-5">
+    <a routerLink="/propiedad/crear-apartamento" class="waves-effect waves-light btn-small">Adicionar Apartamento</a>
+</div>
+<main class="grid">
+    <article *ngFor="let apart of listadoApartamento">
+      <img [src]="apart.imagenApartamento!== undefined ? apart.imagenApartamento.at(0)?.ruta: 'https://img.freepik.com/foto-gratis/diseno-apartamento-estudio-moderno-dormitorio-sala-estar_1262-12375.jpg?w=2000' " alt="Sample photo">
+      <div class="text">
+        <h4>{{apart.area}}</h4>
+        <p>Direccion</p>
+        <p>{{apart.direccion}}</p>
+        <p>Propietario</p>
+        <p>{{apart.propietario}}</p>
+        <p>Habitante</p>
+        <p>{{apart.habitante}}</p>
+        <h4>Bottom line</h4>
+        <button>Ver mas Imagenes</button>
+        <a *ngIf="enSesion === true" href=""><span>Adicionar Imagenes </span> </a>
+      </div>
+    </article>
+</main>
+
+<!--<p *ngFor="let apar of listadoApartamento">{{apar.direccion}}</p> -->

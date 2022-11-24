@@ -1,0 +1,24 @@
+<a routerLink="/registro/crear-persona"><span class="btn mt-3">Registrar Persona</span></a>
+<table class="table responsive">
+    <thead>
+      <tr>
+          <th>nombreCompleto</th>
+          <th>documento</th>
+          <th>correo</th>
+          <th>celular</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let pers of listadoPersonas">
+        <td>{{pers.nombreCompleto}}</td>
+        <td>{{pers.documento}}</td>
+        <td>{{pers.correo}}</td>
+        <td>{{pers.celular}}</td>
+        <td>
+            <a routerLink="/registro/editar-persona/{{pers.id}}"><span class="btn">Editar</span></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+        
